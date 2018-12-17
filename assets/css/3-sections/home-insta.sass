@@ -1,0 +1,40 @@
+section.insta
+  background:
+    image: url('../img/insta-bg.jpg')
+    size: cover
+  color: white
+  text-shadow: #000 0px 0px 5px, #000 0px 0px 10px
+
+  .home-cta
+    background-image: linear-gradient(to right, #8a3ab9,#4c68d7,#cd486b,#fbad50, #fccc63,#bc2a8d,#e95950)
+    box-shadow: 0px 4px 8px rgba(255,255,255,.2)
+    transition: all .1s ease-in-out
+    text-shadow: none
+    color: white
+    text-shadow: #000 0px 0px 5px, #000 0px 0px 10px
+
+
+    &:hover
+      box-shadow: 0px 4px 8px rgba(255,255,255,.4)
+
+  .description
+    display: flex
+    align-items: center
+
+  @media(max-width: 640px)
+    .col-1
+      text-align: center
+
+    .description
+      margin-top: 50px
+      display: block
+
+
+  .fade-in
+    position: relative
+    height: 800px
+
+    .instagram-media
+      position: absolute
+      left: 0px
+      top: 0px

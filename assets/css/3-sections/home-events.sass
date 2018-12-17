@@ -1,0 +1,114 @@
+.home-sections .events
+  padding: 0px
+
+section.events
+  background:
+    image: url(../img/events-bg.jpg)
+    size: cover
+    position: center top
+  color: $color-primary
+  text-shadow: #000 0px 0px 5px, #000 0px 0px 10px
+
+
+  @media (max-width: 640px)
+    display: block
+
+  .col-1
+    display: flex
+    align-items: center
+
+    @media (max-width: 640px)
+      display: block
+
+
+  .home-cta
+    color: white
+    background: $color-primary
+    text-shadow: none
+
+  .events-wrap
+    margin: -50px 0
+
+  .events-thumb
+    display: block
+    background:
+      size: cover
+      position: center
+    width: 25%
+    float: left
+    position: relative
+    overflow: hidden
+    opacity: 0
+    transition: all 400ms ease-in-out
+
+    &.is-visible
+      opacity: 1
+
+    &.is-emph
+      animation-name: tada
+      animation-duration: 5s
+      animation-fill-mode: both
+      z-index: 1
+      animation-iteration-count: 1
+
+
+
+    &:after
+      content: ""
+      display: block
+      padding-top: 100%
+
+  .events-meta
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: fade-out($color-primary, .5)
+    color: white
+    padding: 10px
+    transform: translate(0%, 100%) scale(.5)
+    transition: all 200ms ease-in-out
+    opacity: 0
+
+
+    .name
+      font-size: 18px
+      line-height: 1.2
+
+    .date
+      font-style: italic
+
+  .events-thumb:hover .events-meta
+    opacity: 1
+    transform: translate(0%, 0%) scale(1)
+
+
+  @media (max-width: 640px)
+    .desc-wrap
+      margin-top: 100px
+
+  @media (max-width: 999px)
+    .events-thumb
+      width: 33.33%
+
+
+@keyframes tada
+  from
+    transform: scale3d(1, 1, 1)
+
+
+  10%,20%
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)
+
+
+  30%,50%,70%,90%
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+
+
+  40%,60%,80%
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+
+
+  to
+    transform: scale3d(1, 1, 1)

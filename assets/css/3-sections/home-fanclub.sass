@@ -1,0 +1,95 @@
+section.fanclub
+  background:
+    image: url(../img/fanclub-bg.jpg)
+    size: cover
+    position: center
+  color: white
+  text-shadow: #000 0px 0px 5px, #000 0px 0px 10px
+
+  .home-lead
+    text-align: center
+
+  .col-1
+    padding-left: 30px
+    font-size: 18px
+    font-style: italic
+    line-height: 1.8
+
+    &:first-child
+      padding-left: 0
+      padding-right: 30px
+      text-align: center
+      // border-right: solid 2px white
+
+    @media (max-width: 640px)
+      padding: 0 10px
+
+      &:first-child
+        padding-left: 0 10px
+        text-align: center
+        border: center
+
+
+
+  a
+    color: white
+    text-decoration: underline
+
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+
+  p
+    margin: 0
+
+.form-display
+  background: rgba(white, .3)
+  border: 3px solid white
+  box-shadow: 0 3px 8px rgba(white, .3)
+  display: flex
+  margin: 50px 0
+
+  @media (max-width: 590px)
+    display: block
+
+
+  .mc-field-group
+    position: relative
+    flex: 2
+
+    &:first-child
+      border-right: 4px white solid
+
+      @media (max-width: 590px)
+        border-right: none
+        border-bottom: 4px solid white
+
+  input
+    position: relative
+    border: 0
+    background: none
+    padding: 0
+    display: block
+    height: 60px
+    width: 100%
+    border-radius: 0
+    padding: 0 10px
+    font-size: 18px
+
+
+    &:focus
+      outline: none
+
+    &[type='submit']
+      flex: 1
+      background: white
+      color: $color-primary
+      font-size: 20px
+
+
+  label
+    position: absolute
+    z-index: 2
+    font-size: 12px
+    left: 10px

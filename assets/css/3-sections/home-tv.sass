@@ -1,0 +1,48 @@
+
+.home-sections .tv
+  padding: 0px
+
+section.tv
+  color: white
+
+  .home-lead
+    text-align: center
+    font-size: 30px
+
+  .ms, .vr
+    background:
+      color: #000
+    padding: 50px 0
+    transition: background-color 150ms ease-in-out
+
+    &.vr
+      background-color: $color-primary
+
+      .home-cta
+        font-size: 24px
+        color: $color-primary
+
+  .home-cta
+    font-size: 24px
+    color: #000
+
+
+  .ms-img-link
+    display: block
+    float: left
+    width: calc(50% - 14px)
+    border: 2px solid white
+    box-shadow: 0px 3px 10px rgba(0,0,0,.2)
+    transition: transform 150ms ease-in-out
+
+    &:hover
+      transform: scale(1.1)
+
+    margin: 5px
+
+    img
+      max-width: 100%
+      display: block
+  .cf
+    clear: both
+    margin-bottom: 20px

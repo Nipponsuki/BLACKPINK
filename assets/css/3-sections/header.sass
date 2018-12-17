@@ -1,0 +1,135 @@
+.home-wrap
+  header
+    width: 135px
+    background: $color-primary
+    padding: 30px 0
+
+    .header-position
+      position: fixed
+      top: 30px
+      left: 0
+      bottom: 30px
+      width: 135px
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+
+    .logo
+      overflow: hidden
+      text-indent: 101%
+      max-width: 135px
+      white-space: nowrap
+      background:
+        image: url(/assets/img/logo.svg)
+        repeat: no-repeat
+        position: center
+        size: contain
+        color: $color-primary
+      height: 80px
+      padding: 0
+      margin: 0px 0px 6px 0px
+
+    .site-nav
+      ul
+        list-style: none
+        margin: 20px 0
+        padding: 0 33px 0 0
+        text-align: right
+
+        li
+          margin-bottom: 10px
+          a
+            color: black
+
+            &:hover
+              color: white
+
+
+          &:last-child
+            margin-bottom: 0
+
+    .mobile-nav-toggle
+      display: none
+      width: 50px
+      height: 50px
+      margin-right: 20px
+      margin-left: auto
+      text-align: right
+      cursor: pointer
+
+
+
+      span,
+      span:before,
+      span:after
+        content: ""
+        display: block
+        height: 4px
+        background: #000
+        margin-top: 12px
+        transition: all .2s ease-in-out
+
+      span:before
+        transform: translateY(-14px)
+      span:after
+        transform: translateY(0px)
+
+
+  .mobile-nav
+    display: none
+    position: absolute
+    width: 100%
+    background: $color-primary
+    padding: 30px 0 20px
+    transform: rotateY(-100%)
+    transition: all .3s ease-in-out
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+
+    li
+      text-align: center
+      margin-bottom: 10px
+
+
+
+
+
+@media (max-width: 775px)
+  .home-wrap
+    header
+      width: auto
+      padding: 20px 0
+
+      .header-position
+        width: auto
+        position: relative
+        top: auto
+        bottom: auto
+        left: auto
+        flex-direction: row
+        align-items: center
+
+      .site-nav
+        display: none
+
+      .logo
+        height: 60px
+      .mobile-nav-toggle
+        display: block
+
+      &:is-open span
+        background: transparent
+
+      &:is-open span:before
+        transform-origin: rigth
+        transform: rotate(45deg) translateY(5px)
+
+      &:is-open span:after
+        transform-origin: left
+        transform: rotate(-45deg) translateY(5px)
+
+    .mobile-nav.is-open
+        display: block
+        transform: translateY(0)

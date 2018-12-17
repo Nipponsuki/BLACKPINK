@@ -1,0 +1,29 @@
+mixin tv-img(link, img, color)
+  a(href="#{link}" data-color="#{color}").ms-img-link
+    img(src="../assets/img/#{img}")
+
+section.tv#tv
+  .flex.flex--center
+    .col-50.flex.flex--center.ms(data-orig-color="#000")
+      .col-1
+        p.home-lead Music Shows
+        +tv-img('#','ms-1.jpg?noresize','#21e6c1')
+        +tv-img('#','ms-2.jpg?noresize','#7DDF64')
+        +tv-img('#','ms-3.jpg?noresize','#7045af')
+        +tv-img('#','ms-4.jpg?noresize','#ED4D6E')
+        +tv-img('#','ms-5.jpg?noresize','#C4D7F2')
+        +tv-img('#','ms-6.jpg?noresize','#8AE1FC')
+        .cf
+        a(href="").home-cta See more perfomances
+        
+    .col-50.flex.flex--center.vr(data-orig-color="#e8538c")
+      .col-1
+        p.home-lead  Variety Shows
+        +tv-img('#','vr-1.jpg?noresize','#2A4494')
+        +tv-img('#','vr-2.jpg?noresize','#DAFF7D')
+        +tv-img('#','vr-3.jpg?noresize','#232ED1')
+        +tv-img('#','vr-4.jpg?noresize','#FB5607')
+        +tv-img('#','vr-5.jpg?noresize','#DDBDD5')
+        +tv-img('#','vr-6.jpg?noresize','#157F1F')
+        .cf
+        a(href='').home-cta See more shows

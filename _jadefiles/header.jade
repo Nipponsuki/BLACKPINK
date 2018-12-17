@@ -1,0 +1,27 @@
+mixin nav-content()
+  ul
+    li: a(href='#about') About
+    li: a(href='#youtube') YouTube
+    li: a(href='#profiles') Profiles
+    li: a(href='#events') Events
+    li: a(href='#insta') Instagram
+    li: a(href='#tv') TV
+    li: a(href='#fanclub') Fanclub
+    li: a(href='#spotify') Listen
+
+
+.mobile-nav
+  +nav-content()
+  
+header
+  .header-position
+    h1.logo Blackpink
+    
+    nav.site-nav
+      +nav-content()
+      
+        
+    .mobile-nav-toggle: span
+      
+  
+  
