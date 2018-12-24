@@ -5,7 +5,7 @@ body.preloader-site {
 .preloader-wrapper {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to bottom right, #000,#EA508C);
+    background-image: linear-gradient(to right, #000,#EA508C);
     position: fixed;
     top: 0;
     left: 0;
@@ -19,7 +19,7 @@ body.preloader-site {
     left: 50%;
     transform: translate(-50%, -50%);
     img{
-      border-radius: 2px;
+      border-radius: 10px;
       width: 50%;
     }
 
